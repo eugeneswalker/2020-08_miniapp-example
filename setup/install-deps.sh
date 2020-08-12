@@ -13,11 +13,11 @@ PANTHEON_SOURCE_ROOT=$PWD
     # serial
 # BUILD_FLAGS=""
     # parallel
-BUILD_FLAGS="-j"
+# BUILD_FLAGS="-j"
 
 # these settings allow you to control what gets built ... 
-BUILD_CLEAN=false
-INSTALL_SPACK=false
+BUILD_CLEAN=true
+INSTALL_SPACK=true
 INSTALL_ASCENT=true
 INSTALL_APP=false
 
