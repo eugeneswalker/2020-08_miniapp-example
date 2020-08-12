@@ -16,9 +16,10 @@ PANTHEON_SOURCE_ROOT=$PWD
 BUILD_FLAGS="-j"
 
 # these settings allow you to control what gets built ... 
-BUILD_CLEAN=true
+BUILD_CLEAN=false
+INSTALL_SPACK=false
 INSTALL_ASCENT=true
-INSTALL_APP=true
+INSTALL_APP=false
 
 # other variables
 
@@ -33,6 +34,9 @@ INSTALL_APP=true
 # ---------------------------------------------------------------------------
 
 START_TIME=$(date +"%r")
+echo "------------------------------------------------------------"
+echo "PTN: Start time: $START_TIME" 
+echo "------------------------------------------------------------"
 
 # if a clean build, remove everything
 if $BUILD_CLEAN; then
@@ -61,10 +65,14 @@ if $INSTALL_ASCENT; then
 
     pushd $PANTHEON_WORKFLOW_DIR
 
-    git clone https://github.com/spack/spack 
-    pushd spack
-    git checkout 6ccc430e8f108d424cc3c9708e700e94ca2ec688
-    popd
+    if $INSTALL_SPACK; then
+        git clone https://github.com/spack/spack 
+        pushd spack
+        git checkout 6ccc430e8f108d424cc3c9708e700e94ca2ec688
+        popd
+    fi
+
+    # set up spack and install
     . spack/share/spack/setup-env.sh
     spack -e . concretize -f 2>&1 | tee concretize.log
     spack -e . install --no-cache
