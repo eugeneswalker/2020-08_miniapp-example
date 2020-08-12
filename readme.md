@@ -1,8 +1,9 @@
 ![research](https://pantheonscience.github.io/states/research.png)
 
-# Pantheon Workflow Template v <noop name="version">1.0</noop>
+# Pantheon ECP in-situ miniapp example workflow
 
-A repository template for the Pantheon project workflows on summit.
+A repository for examples using Ascent, in-situ creation of Cinema
+databases, and post-processing analysis. 
 
 ## Using this repository
 
