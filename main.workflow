@@ -1,5 +1,5 @@
 
-workflow "nyx" {
+workflow "pantheon" {
   resolves = "validate"
 }
 
