@@ -26,9 +26,9 @@ export PANTHEON_DATA_DIR=$PANTHEON_WORKFLOW_DIR/data
 export PATH=$PANTHEON_WORKFLOW_DIR/spack/bin:$PATH
 
 # print out the environment
-echo ----------------------------------------------------------------------
+echo ------------------------------------------------------------
 echo Pantheon Environment
-echo ----------------------------------------------------------------------
+echo ------------------------------------------------------------
 echo PANTHEON_VERSION.....: $PANTHEON_VERSION
 echo PANTHEONPATH.........: $PANTHEONPATH
 echo PANTHEON_WORKFLOW_DIR: $PANTHEON_WORKFLOW_DIR
@@ -37,4 +37,4 @@ echo PANTHEON_DATA_DIR....: $PANTHEON_DATA_DIR
 echo PANTHEON_WORKFLOW_ID.: $PANTHEON_WORKFLOW_ID
 echo PANTHEON_WORKFLOW_JID: $PANTHEON_WORKFLOW_JID
 echo PANTHEON_APP.........: $PANTHEON_APP
-echo ----------------------------------------------------------------------
+echo ------------------------------------------------------------
