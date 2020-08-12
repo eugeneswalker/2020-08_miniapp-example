@@ -1,0 +1,17 @@
+pantheon:
+    version: 1.0 
+    state: research
+
+project:
+    name: E4S 
+
+workflow:
+    pantheonid: E4S_ASCENT
+    desc: Pantheon workflow designed for E4S integration 
+    workflow_app: cloverleaf3d 
+    workflow_in-situ: in-situ
+    workflow_post-processing: post
+           
+contact: 
+    name: David Rogers 
+    email: dhr@lanl.gov 
