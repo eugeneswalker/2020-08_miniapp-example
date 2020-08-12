@@ -6,7 +6,7 @@ project:
     name: E4S 
 
 workflow:
-    pantheonid: E4S_ASCENT
+    pantheonid: E4S_miniapp-example
     desc: Pantheon workflow designed for E4S integration 
     workflow_app: cloverleaf3d 
     workflow_in-situ: in-situ
