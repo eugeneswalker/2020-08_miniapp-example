@@ -12,8 +12,11 @@ if $RUN_CLEAN; then
     rm -rf $PANTHEON_RUN_DIR
     mkdir $PANTHEON_RUN_DIR
     pushd $PANTHEON_RUN_DIR
-    ASCENT_HASH=ascent-develop-eekuvldph3nshigea2lfccz6bacbulkc
-    cp -rf $PANTHEON_WORKFLOW_DIR/spack/opt/spack/linux-rhel7-power9le/gcc-6.4.0/$ASCENT_HASH/examples/ascent/proxies/cloverleaf3d/* .
+
+    # use spack to find the location of the installed app
+    SPACK_ASCENT_PATH=`spack find -p ascent`
+    SPACK_HASH_PATH=`echo $SPACK_ASCENT_PATH | awk '{print $NF}'`
+    cp -rf $SPACK_HASH_PATH/examples/ascent/proxies/cloverleaf3d/* .
     popd
 fi
 

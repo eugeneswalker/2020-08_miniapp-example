@@ -16,9 +16,9 @@ PANTHEON_SOURCE_ROOT=$PWD
 BUILD_FLAGS="-j"
 
 # these settings allow you to control what gets built ... 
-BUILD_CLEAN=false
-INSTALL_ASCENT=false
-INSTALL_APP=false
+BUILD_CLEAN=true
+INSTALL_ASCENT=true
+INSTALL_APP=true
 
 # other variables
 
