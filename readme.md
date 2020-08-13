@@ -9,13 +9,15 @@ This workflow will pull cached builds from a [E4S](https://e4s-project.github.io
 to speed up the build/install of requisite applications. If no cached builds are available, it will use
 [spack](https://github.com/spack/spack) to build applications.
 
-<table class="center">
+<p align="center">
+<table>
 <tr>
 <td><img width="200" src="doc/0000.png"</td>
 <td><img width="200" src="doc/0001.png"</td>
 <td><img width="200" src="doc/0002.png"</td>
 </tr>
 </table>
+</p>
 <p align="center">Images from the resulting Cinema database</p>
 
 The workflow does the following:
