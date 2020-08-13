@@ -1,9 +1,28 @@
 ![research](https://pantheonscience.github.io/states/research.png)
 
-# Pantheon ECP in-situ miniapp example workflow
+# Pantheon/E4S ECP in-situ miniapp example workflow
 
 A repository for examples using Ascent, in-situ creation of Cinema
 databases, and post-processing analysis. 
+
+This workflow will pull cached builds from a [E4S](https://e4s-project.github.io/) repository, if they exist
+to speed up the build/install of requisite applications. If no cached builds are available, it will use
+[spack](https://github.com/spack/spack) to build applications.
+
+The workflow does the following:
+
+1. Creates a Pantheon environment and build location
+2. Clones a specific commit of `spack`
+3. Uses `spack` to build `Ascent`, and set up a coupled app/in-situ workflow
+4. Runs the workflow to produce a Cinema datbase
+5. Verifies the `Cinema` database
+
+The workflow incorporates the following ECP technogies:
+1. [Pantheon](http://pantheonscience.org/)
+1. [E4S](https://e4s-project.github.io/)
+1. [Ascent](https://ascent.readthedocs.io/en/latest/)
+1. [Cinema](https://cinemascience.org)
+1. [Spack](https://github.com/spack/spack)
 
 ## Using this repository
 
@@ -19,14 +38,6 @@ When the workflow is run, the following files will be run in this order:
 | file | what to do |
 |------|---------|
 |`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
-|`pantheon/pantheon.yaml` | edit this to reflect the information from Pantheon for your workflow. If you do not have Pantheon settings information, you may leave this file unedited. |
-|`postprocess/postprocess.sh` | edit this to call your postprocessing scripts, if you have them. |
-|`readme.md` | edit the top line to indicate what type of Pantheon pipeline this is. |
-|`run/run.sh` | edit this to copy files as needed by the application. |
-|`run/submit.sh` | edit this to properly submit your job. |
-|`setup/install-deps.sh` | edit to install dependencies |
-|`setup/install-app.sh` | edit to install application  |
-
 
 ## DO NOT edit these files
 
