@@ -38,6 +38,7 @@ When the workflow is run, the following files will be run in this order:
 1. `run/run.sh` (this submits the job)
 1. `run/wait_for_completion.sh`
 1. `postprocessing/postprocessing.sh`
+1. `validate/validate.sh`
 
 ## Edit these files
 | file | what to do |
