@@ -48,7 +48,3 @@ When the workflow is run, the following files will be run in this order:
 | file | what to do |
 |------|---------|
 |`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
-
-## DO NOT edit these files
-
-1. `pantheon/pantheon.env`
