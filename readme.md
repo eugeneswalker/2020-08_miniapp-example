@@ -1,6 +1,6 @@
 ![research](https://pantheonscience.github.io/states/research.png)
 
-# Pantheon/E4S ECP in-situ miniapp example workflow
+# Pantheon/E4S/Ascent in-situ miniapp example workflow
 
 A repository for examples using Ascent, in-situ creation of `Cinema`
 databases, and post-processing analysis. 
