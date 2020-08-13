@@ -4,6 +4,7 @@ pantheon:
 
 project:
     name: E4S 
+    website: https://e4s-project.github.io
 
 workflow:
     pantheonid: E4S_miniapp-example
