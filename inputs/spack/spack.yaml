@@ -5,6 +5,18 @@ spack:
     build_stage: $spack/build_stage
   specs:
   - ascent
+  compilers:
+  - compiler:
+      spec: gcc@6.4.0
+      paths:
+        cc: /sw/summit/gcc/6.4.0/bin/gcc
+        cxx: /sw/summit/gcc/6.4.0/bin/g++
+        f77: /sw/summit/gcc/6.4.0/bin/gfortran
+        fc: /sw/summit/gcc/6.4.0/bin/gfortran
+      operating_system: rhel7
+      target: ppc64le
+      modules:
+      - gcc/6.4.0
 
   packages:
     all:

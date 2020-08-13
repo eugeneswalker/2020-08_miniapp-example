@@ -8,6 +8,8 @@ echo "PTN: validating"
 OUTPUT=$PANTHEON_RUN_DIR/cinema_databases/clover_db/data.csv
 GOLD=validate/data/cloverleaf3d_001.cdb/data.csv
 
+echo "     $OUTPUT"
+
 PASS=false
 if [ -f $OUTPUT ]; then
     if cmp "$OUTPUT" "$GOLD"; then
