@@ -2,7 +2,7 @@
 
 # Pantheon/E4S ECP in-situ miniapp example workflow
 
-A repository for examples using Ascent, in-situ creation of Cinema
+A repository for examples using Ascent, in-situ creation of `Cinema`
 databases, and post-processing analysis. 
 
 This workflow will pull cached builds from a [E4S](https://e4s-project.github.io/) repository, if they exist
@@ -14,7 +14,7 @@ The workflow does the following:
 1. Creates a Pantheon environment and build location
 2. Clones a specific commit of `spack`
 3. Uses `spack` to build `Ascent`, and set up a coupled app/in-situ workflow
-4. Runs the workflow to produce a Cinema datbase
+4. Runs the workflow to produce a `Cinema` datbase
 5. Verifies the `Cinema` database
 
 The workflow incorporates the following ECP technogies:
