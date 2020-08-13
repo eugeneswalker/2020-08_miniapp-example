@@ -9,6 +9,16 @@ This workflow will pull cached builds from a [E4S](https://e4s-project.github.io
 to speed up the build/install of requisite applications. If no cached builds are available, it will use
 [spack](https://github.com/spack/spack) to build applications.
 
+<p align="center">
+<table>
+<tr>
+<td><img width="50" src="doc/0000.png"</td>
+<td><img width="50" src="doc/0001.png"</td>
+<td><img width="50" src="doc/0002.png"</td>
+</tr>
+</table>
+</p>
+
 The workflow does the following:
 
 1. Creates a Pantheon environment and build location
