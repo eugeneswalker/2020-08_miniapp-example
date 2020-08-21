@@ -5,6 +5,8 @@
 A repository for examples using `Ascent`, in-situ creation of `Cinema`
 databases, and post-processing analysis. 
 
+Build instructions embedded in this workflow are derived from the Ascent build instructions [here](https://ascent.readthedocs.io/en/latest/BuildingAscent.html). This workflow uses **spack** to build all executables, from a specific commit.
+
 This workflow will pull cached builds from a [E4S](https://e4s-project.github.io/) repository, if they exist
 to speed up the build/install of requisite applications. If no cached builds are available, it will use
 [spack](https://github.com/spack/spack) to build applications.
