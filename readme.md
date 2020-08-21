@@ -35,7 +35,7 @@ The workflow does the following:
 First, clone the repository, then:
 
 1. edit the `bootstrap.env` file to include your summit allocation ID
-2. `.execute` will execute the workflow
+2. `./execute` will execute the workflow
 
 When the workflow is run, the following files will be run in this order:
 
