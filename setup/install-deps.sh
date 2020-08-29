@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/usr/bin/bash -l
 
 # adding comment
 
@@ -16,10 +16,10 @@ PANTHEON_SOURCE_ROOT=$PWD
 # BUILD_FLAGS="-j"
 
 # these settings allow you to control what gets built ... 
-BUILD_CLEAN=true
+BUILD_CLEAN=false
 INSTALL_SPACK=true
-INSTALL_ASCENT=true
-INSTALL_APP=false
+INSTALL_ASCENT=false
+INSTALL_APP=true
 
 # other variables
 
@@ -78,7 +78,8 @@ if $INSTALL_ASCENT; then
     # authenticate to pull cached builds, if they exist
     wget --no-check-certificate https://oaciss.nic.uoregon.edu/e4s/e4s.pub
     spack gpg trust e4s.pub
-    spack mirror add e4s_summit /ccs/home/sameer/apps/pantheon/e4smirror
+    # spack mirror add e4s_summit /ccs/home/sameer/apps/pantheon/e4smirror
+    spack mirror add e4s_summit https://cache.e4s.io 
     time spack -e . install 
 
     popd
