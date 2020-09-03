@@ -40,15 +40,7 @@ popd
 
 pushd Nyx/Exec/LyA
 
-# static build on summit
-    # this works
-ASCENT_VERSION=0.5.2-pre
-ASCENT_INSTALL_DIR=/gpfs/alpine/world-shared/csc340/software/ascent/$ASCENT_VERSION/summit/openmp/gnu/ascent-install
-
-# new spack build 
-    # this does not work
-# ASCENT=$(spack find -p ascent)
-# ASCENT_INSTALL_DIR=${ASCENT##* }
+ASCENT_INSTALL_DIR=$(spack location -i ascent)
 
 make -j 4 \
         AMREX_HOME=$PANTHEON_WORKFLOW_DIR/$PACKAGEDIR/amrex \
