@@ -16,9 +16,9 @@ PANTHEON_SOURCE_ROOT=$PWD
 # BUILD_FLAGS="-j"
 
 # these settings allow you to control what gets built ... 
-BUILD_CLEAN=false
+BUILD_CLEAN=true
 INSTALL_SPACK=true
-INSTALL_ASCENT=false
+INSTALL_ASCENT=true
 INSTALL_APP=true
 
 # other variables
@@ -61,7 +61,7 @@ if $INSTALL_ASCENT; then
     echo "------------------------------------------------------------"
 
     # copy spack settings
-    cp inputs/spack/spack.yaml $PANTHEON_WORKFLOW_DIR
+    cp inputs/spack/spack.yaml $PANTHEON_WORKFLOW_DIR/.
 
     pushd $PANTHEON_WORKFLOW_DIR
 
@@ -76,11 +76,11 @@ if $INSTALL_ASCENT; then
     . spack/share/spack/setup-env.sh
     spack -e . concretize -f 2>&1 | tee concretize.log
     # authenticate to pull cached builds, if they exist
-    wget --no-check-certificate https://oaciss.nic.uoregon.edu/e4s/e4s.pub
+    wget https://oaciss.uoregon.edu/e4s/e4s.pub 
     spack gpg trust e4s.pub
     # spack mirror add e4s_summit /ccs/home/sameer/apps/pantheon/e4smirror
-    spack mirror add e4s_summit https://cache.e4s.io 
-    time spack -e . install 
+    spack mirror add e4s https://cache.e4s.io #https://cache.e4s.io #e4s_summit https://cache.e4s.io 
+    time spack -e . install --cache-only
 
     popd
 fi
