@@ -79,6 +79,8 @@ if $INSTALL_ASCENT; then
     wget https://oaciss.uoregon.edu/e4s/e4s.pub 
     spack gpg trust e4s.pub
     # spack mirror add e4s_summit /ccs/home/sameer/apps/pantheon/e4smirror
+    #spack -e . install --no-cache patchelf%gcc@6.4.0 target=power9le
+    module load patchelf
     spack mirror add e4s https://cache.e4s.io #https://cache.e4s.io #e4s_summit https://cache.e4s.io 
     time spack -e . install --cache-only
 
