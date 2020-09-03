@@ -1,7 +1,7 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
 
 ./sbang.sh setup/install-deps.sh
-./sbang.sh run/run.sh
-./sbang.sh run/wait_for_completion.sh
-./sbang.sh postprocess/postprocess.sh
-./sbang.sh validate/validate.sh
+#./sbang.sh run/run.sh
+#./sbang.sh run/wait_for_completion.sh
+#./sbang.sh postprocess/postprocess.sh
+#./sbang.sh validate/validate.sh
