@@ -46,6 +46,8 @@ When the workflow is run, the following files will be run in this order:
 1. `postprocessing/postprocessing.sh`
 1. `validate/validate.sh`
 
+After execution, the output files can be found in the folder of your allocation under /pantheon/ECP_WarpX-example/results.
+
 ## Edit these files
 | file | what to do |
 |------|---------|
