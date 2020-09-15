@@ -3,7 +3,7 @@
 #BSUB -J <pantheon_workflow_jid> 
 #BSUB -nnodes 2
 #BSUB -P <summit_allocation> 
-#BSUB -W 00:30
+#BSUB -W 00:10
 
 module load gcc/6.4.0
 
