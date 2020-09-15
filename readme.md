@@ -14,9 +14,9 @@ to speed up the build/install of requisite applications. If no cached builds are
 <p align="center">
 <table>
 <tr>
-<td><img width="200" src="doc/0000.png"</td>
-<td><img width="200" src="doc/0001.png"</td>
-<td><img width="200" src="doc/0002.png"</td>
+<td><img width="200" src="doc/ascent/0000.png"</td>
+<td><img width="200" src="doc/ascent/0001.png"</td>
+<td><img width="200" src="doc/ascent/0002.png"</td>
 </tr>
 </table>
 </p>
