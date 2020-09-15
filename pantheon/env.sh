@@ -10,6 +10,7 @@ source bootstrap.env
 export PANTHEON_WORKFLOW_ID=`awk '/pantheonid/{print $NF}' pantheon/pantheon.yaml`
     # create the job id - a lower case version of the workflow id
 export PANTHEON_WORKFLOW_JID=`echo "$PANTHEON_WORKFLOW_ID" | awk '{print tolower($0)}'`
+export PANTHEON_POST_JID=${PANTHEON_WORKFLOW_JID}_post
 export PANTHEON_APP=`awk '/workflow_app/{print $NF}' pantheon/pantheon.yaml`
 export PANTHEON_VERSION=`awk '/version/{print $NF}' pantheon/pantheon.yaml`
 
@@ -36,5 +37,6 @@ echo PANTHEON_RUN_DIR.....: $PANTHEON_RUN_DIR
 echo PANTHEON_DATA_DIR....: $PANTHEON_DATA_DIR
 echo PANTHEON_WORKFLOW_ID.: $PANTHEON_WORKFLOW_ID
 echo PANTHEON_WORKFLOW_JID: $PANTHEON_WORKFLOW_JID
+echo PANTHEON_POST_JID....: $PANTHEON_POST_JID
 echo PANTHEON_APP.........: $PANTHEON_APP
 echo ------------------------------------------------------------
