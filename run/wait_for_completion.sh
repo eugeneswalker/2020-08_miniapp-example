@@ -10,4 +10,4 @@ while [ "$(bjobs 2>&1 | grep "$PANTHEON_WORKFLOW_JID")" ]; do
   echo ===========================================; bjobs; 
   sleep 5; 
 done;
-echo "Jobs have finished running. Move to validation stage."
+echo "Jobs have finished running"
