@@ -1,8 +1,6 @@
 spack:
   view: false
   concretization: separately
-  config:
-    build_stage: $spack/build_stage
   specs:
   - ascent
   compilers:
@@ -18,6 +16,9 @@ spack:
       modules:
       - gcc/6.4.0
 
+      environment:
+        unset: []
+      extra_rpaths: []
   packages:
     all:
       target: [power9le]
@@ -81,21 +82,21 @@ spack:
       buildable: true
       providers: {}
     ascent:
-      variants: ~openmp~shared~adios~mfem+fortran+test~python+serial+mpi+cuda+vtkh
+      variants: +openmp+shared~adios~mfem+fortran+test~python+serial+mpi~cuda+vtkh
       version: []
       target: []
       compiler: []
       buildable: true
       providers: {}
     vtk-h:
-      variants: +cuda~openmp+mpi+serial cuda_arch=70
+      variants: ~cuda~openmp+mpi+serial+shared
       version: [develop]
       target: []
       compiler: []
       buildable: true
       providers: {}
     vtk-m:
-      variants: ~mpi+cuda cuda_arch=70
+      variants: ~mpi~cuda~shared
       version: []
       target: []
       compiler: []
