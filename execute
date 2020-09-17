@@ -1,4 +1,6 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
+
+source bootstrap.env
 
 ./sbang.sh setup/install-deps.sh
 ./sbang.sh run/run.sh
