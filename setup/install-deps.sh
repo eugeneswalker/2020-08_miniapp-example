@@ -75,10 +75,9 @@ if $INSTALL_ASCENT; then
     # set up spack and install
     . spack/share/spack/setup-env.sh
     spack -e . concretize -f 2>&1 | tee concretize.log
-    # authenticate to pull cached builds, if they exist
-    wget --no-check-certificate https://oaciss.nic.uoregon.edu/e4s/e4s.pub
-    spack gpg trust e4s.pub
-    spack mirror add e4s_summit /ccs/home/sameer/apps/pantheon/e4smirror
+    spack mirror add e4s_summit https://cache.e4s.io 
+    spack buildcache keys -it
+    module load patchelf
     time spack -e . install 
 
     popd
