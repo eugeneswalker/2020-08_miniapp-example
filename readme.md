@@ -47,8 +47,3 @@ When the workflow is run, the following files will be run in this order:
 1. `validate/validate.sh`
 
 After execution, the output files can be found in the folder of your allocation under /pantheon/ECP_WarpX-example/results.
-
-## Edit these files
-| file | what to do |
-|------|---------|
-|`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
