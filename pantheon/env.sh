@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------
 # Pantheon environment file
-#     Summit Template v 1.0
 # ----------------------------------------------------------------------
 
 source bootstrap.env
@@ -15,7 +14,6 @@ export PANTHEON_APP=`awk '/workflow_app/{print $NF}' pantheon/pantheon.yaml`
 export PANTHEON_VERSION=`awk '/version/{print $NF}' pantheon/pantheon.yaml`
 
 # this instance's directories
-export PANTHEON_BASE_PATH=$MEMBERWORK/$SUMMIT_ALLOCATION
 export PANTHEONPATH=$PANTHEON_BASE_PATH/pantheon
 export PANTHEON_WORKFLOW_DIR=$PANTHEONPATH/$PANTHEON_WORKFLOW_ID
 export PANTHEON_RUN_DIR=$PANTHEON_WORKFLOW_DIR/results
