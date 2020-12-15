@@ -37,7 +37,7 @@ pushd $PANTHEON_RUN_DIR
 sed -i "s/<pantheon_workflow_jid>/${PANTHEON_WORKFLOW_JID}/" submit.sh
 sed -i "s#<pantheon_workflow_dir>#${PANTHEON_WORKFLOW_DIR}#" submit.sh
 sed -i "s#<pantheon_run_dir>#${PANTHEON_RUN_DIR}#" submit.sh
-sed -i "s#<summit_allocation>#${SUMMIT_ALLOCATION}#" submit.sh
+sed -i "s#<compute_allocation>#${COMPUTE_ALLOCATION}#" submit.sh
 
 # remove existing file
 rm -f ascent_actions.json
