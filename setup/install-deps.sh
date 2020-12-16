@@ -18,6 +18,8 @@ PANTHEON_SOURCE_ROOT=$PWD
 # these settings allow you to control what gets built ... 
 BUILD_CLEAN=true
 INSTALL_SPACK=true
+SPACK_CACHE=true
+SPACK_COMMIT=6ccc430e8f108d424cc3c9708e700e94ca2ec688
 INSTALL_ASCENT=true
 INSTALL_APP=false
 
@@ -55,6 +57,19 @@ if $BUILD_CLEAN; then
     mkdir $PANTHEON_RUN_DIR
 fi
 
+if $INSTALL_SPACK; then
+    echo "------------------------------------------------------------"
+    echo "PTN: installing Spack ..."
+    echo "------------------------------------------------------------"
+
+    pushd $PANTHEON_WORKFLOW_DIR
+    git clone https://github.com/spack/spack 
+    pushd spack
+    git checkout $SPACK_COMMIT 
+    popd
+    popd
+fi
+
 if $INSTALL_ASCENT; then
     echo "------------------------------------------------------------"
     echo "PTN: building ASCENT ..."
@@ -65,20 +80,26 @@ if $INSTALL_ASCENT; then
 
     pushd $PANTHEON_WORKFLOW_DIR
 
-    if $INSTALL_SPACK; then
-        git clone https://github.com/spack/spack 
-        pushd spack
-        git checkout 6ccc430e8f108d424cc3c9708e700e94ca2ec688
-        popd
-    fi
-
-    # set up spack and install
+    # activate spack and install Ascent
     . spack/share/spack/setup-env.sh
     spack -e . concretize -f 2>&1 | tee concretize.log
     spack mirror add e4s_summit https://cache.e4s.io 
     spack buildcache keys -it
     module load patchelf
-    time spack -e . install 
+
+    if $SPACK_CACHE; then
+        echo "------------------------------------------------------------"
+        echo "PTN: using Spack E4S cache ..."
+        echo "------------------------------------------------------------"
+
+        time spack -e . install 
+    else
+        echo "------------------------------------------------------------"
+        echo "PTN: not using Spack E4S cache ..."
+        echo "------------------------------------------------------------"
+
+        time spack -e . install --no-cache
+    fi
 
     popd
 fi
