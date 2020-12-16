@@ -19,9 +19,9 @@ to speed up the build/install of requisite applications. If no cached builds are
 <p align="center">
 <table>
 <tr>
-<td><img width="200" src="doc/ascent/0000.png"</td>
-<td><img width="200" src="doc/ascent/0001.png"</td>
-<td><img width="200" src="doc/ascent/0002.png"</td>
+<td><img width="200" src="validate/data/cloverleaf3d_001.cdb/0.0/0.0_0.0_clover_db.png"</td>
+<td><img width="200" src="validate/data/cloverleaf3d_001.cdb/9.0/0.0_0.0_clover_db.png"</td>
+<td><img width="200" src="validate/data/cloverleaf3d_001.cdb/19.0/0.0_0.0_clover_db.png"</td>
 </tr>
 </table>
 </p>

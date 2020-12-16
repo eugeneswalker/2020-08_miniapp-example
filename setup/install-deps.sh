@@ -9,25 +9,15 @@ echo $PANTHEON_WORKFLOW_DIR
 
 PANTHEON_SOURCE_ROOT=$PWD
 
-# build serial or parallel
-    # serial
-# BUILD_FLAGS=""
-    # parallel
-# BUILD_FLAGS="-j"
-
 # these settings allow you to control what gets built ... 
 BUILD_CLEAN=true
 INSTALL_SPACK=true
-SPACK_CACHE=true
-SPACK_COMMIT=6ccc430e8f108d424cc3c9708e700e94ca2ec688
+USE_SPACK_CACHE=true
 INSTALL_ASCENT=true
 INSTALL_APP=false
 
-# other variables
-
-# install locations
-
 # commits
+SPACK_COMMIT=6ccc430e8f108d424cc3c9708e700e94ca2ec688
 
 # ---------------------------------------------------------------------------
 #
@@ -87,7 +77,7 @@ if $INSTALL_ASCENT; then
     spack buildcache keys -it
     module load patchelf
 
-    if $SPACK_CACHE; then
+    if $USE_SPACK_CACHE; then
         echo "------------------------------------------------------------"
         echo "PTN: using Spack E4S cache ..."
         echo "------------------------------------------------------------"

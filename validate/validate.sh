@@ -17,7 +17,7 @@ PASS=true
 if [ -d $OUTPUT ]; then
     for val in $dirs; do
         if cmp "$OUTPUT/$val/$img" "$GOLD/$val/$img"; then
-            NOOP=true
+            echo "     Comparing images $GOLD/$val/$img"
         else
             echo "FILES differ:"
             echo "    $OUTPUT"
