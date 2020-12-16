@@ -2,6 +2,11 @@
 
 # Pantheon/E4S/Ascent in-situ miniapp example workflow
 
+<p align="center">
+<img width="750" src="doc/img/diagram.png"/>
+</p>
+<p align="center">Diagram of workflow in this example.</p>
+
 A repository for examples using `Ascent`, in-situ creation of `Cinema`
 databases, and post-processing analysis. 
 
