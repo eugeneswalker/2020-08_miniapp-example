@@ -27,6 +27,7 @@ if [ -d $OUTPUT ]; then
     done
 else
     echo "Cinema Database: $OUTPUT does not exist"
+    PASS=false
 fi
 
 if $PASS; then

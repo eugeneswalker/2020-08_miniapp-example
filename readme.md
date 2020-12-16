@@ -39,5 +39,5 @@ The workflow does the following:
 
 First, clone the repository, then:
 
-1. edit the `bootstrap.env` file to include your compute allocation ID and work directory location
-2. `./execute` will execute the workflow. Check that script for execution steps and order.
+1. edit the `bootstrap.env` file to include your compute allocation ID and workflow path.
+2. `./execute` will execute the workflow
