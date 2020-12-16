@@ -25,7 +25,7 @@ to speed up the build/install of requisite applications. If no cached builds are
 </tr>
 </table>
 </p>
-<p align="center">Images from the resulting Cinema database</p>
+<p align="center">Images from the resulting Cinema database (used to validate run)</p>
 
 The workflow does the following:
 
