@@ -29,11 +29,12 @@ to speed up the build/install of requisite applications. If no cached builds are
 
 The workflow does the following:
 
-1. Creates a [Pantheon](http://pantheonscience.org/) environment and build location
-2. Clones a specific commit of [Spack](https://github.com/spack/spack)
-3. Uses `spack` to build [Ascent](https://ascent.readthedocs.io/en/latest/) and set up a coupled app/in-situ workflow
-4. Runs the workflow to produce a [Cinema](https://cinemascience.org) database
-5. Verifies the `Cinema` database
+- Creates a [Pantheon](http://pantheonscience.org/) environment and build location
+- Clones a specific commit of [Spack](https://github.com/spack/spack)
+- Uses `spack` to build [Ascent](https://ascent.readthedocs.io/en/latest/) and set up a coupled app/in-situ workflow
+- Runs the workflow to produce a [Cinema](https://cinemascience.org) database
+- Adds a `Cinema` viewer, and packages up the results.
+- Verifies the `Cinema` database
 
 ## Using this repository
 
