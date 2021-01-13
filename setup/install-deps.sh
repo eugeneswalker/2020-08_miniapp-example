@@ -12,7 +12,7 @@ PANTHEON_SOURCE_ROOT=$PWD
 # these settings allow you to control what gets built ... 
 BUILD_CLEAN=true
 INSTALL_SPACK=true
-USE_SPACK_CACHE=true
+USE_SPACK_CACHE=false
 INSTALL_ASCENT=true
 INSTALL_APP=false
 
@@ -68,6 +68,9 @@ if $INSTALL_ASCENT; then
     # copy spack settings
     cp inputs/spack/spack.yaml $PANTHEON_WORKFLOW_DIR
 
+    # copy custom spack packages for our needs
+    cp -r inputs/spack/pantheon $PANTHEON_WORKFLOW_DIR/spack/var/spack/repos/pantheon
+
     pushd $PANTHEON_WORKFLOW_DIR
 
     # activate spack and install Ascent
@@ -85,9 +88,13 @@ if $INSTALL_ASCENT; then
         time spack -e . install 
     else
         echo "------------------------------------------------------------"
-        echo "PTN: not using Spack E4S cache ..."
+        echo "PTN: using Spack E4S cache for Ascent's dependencies..."
         echo "------------------------------------------------------------"
+        time spack -e . install --only dependencies
 
+        echo "------------------------------------------------------------"
+        echo "PTN: not using Spack E4S cache for Ascent..."
+        echo "------------------------------------------------------------"
         time spack -e . install --no-cache
     fi
 
