@@ -17,7 +17,7 @@ INSTALL_ASCENT=true
 INSTALL_APP=false
 
 # commits
-SPACK_COMMIT=ef9b8da2826a2ae29ed987ecb0b314c5cfd1a582
+SPACK_COMMIT=676d68a9792b5bc6cea3ab91e77ed8a9eab10f55
 
 # ---------------------------------------------------------------------------
 #

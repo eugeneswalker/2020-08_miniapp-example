@@ -100,7 +100,14 @@ spack:
       providers: {}
     vtk-m:
       variants: ~mpi~cuda~shared
-      version: []
+      version: [ascent_ver]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    conduit:
+      variants: ~adios~doc~doxygen+fortran+hdf5+hdf5_compat+mpi~python+shared~silo+test~zfp
+      version: [0.6.0]
       target: []
       compiler: []
       buildable: true
