@@ -17,7 +17,7 @@ INSTALL_ASCENT=true
 INSTALL_APP=false
 
 # commits
-SPACK_COMMIT=6ccc430e8f108d424cc3c9708e700e94ca2ec688
+SPACK_COMMIT=ef9b8da2826a2ae29ed987ecb0b314c5cfd1a582
 
 # ---------------------------------------------------------------------------
 #
@@ -87,10 +87,10 @@ if $INSTALL_ASCENT; then
 
         time spack -e . install 
     else
-        echo "------------------------------------------------------------"
-        echo "PTN: using Spack E4S cache for Ascent's dependencies..."
-        echo "------------------------------------------------------------"
-        time spack -e . install --only dependencies
+        #echo "------------------------------------------------------------"
+        #echo "PTN: using Spack E4S cache for Ascent's dependencies..."
+        #echo "------------------------------------------------------------"
+        #time spack -e . install --only dependencies
 
         echo "------------------------------------------------------------"
         echo "PTN: not using Spack E4S cache for Ascent..."

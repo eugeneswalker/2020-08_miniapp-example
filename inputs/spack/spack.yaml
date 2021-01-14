@@ -93,7 +93,7 @@ spack:
       providers: {}
     vtk-h:
       variants: ~cuda~openmp+mpi+serial+shared
-      version: [develop]
+      version: [0.6.5]
       target: []
       compiler: []
       buildable: true
